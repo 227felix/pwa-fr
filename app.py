@@ -1,7 +1,8 @@
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, flash, redirect, render_template, request, session, send_file
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from functools import wraps
+
 
 #from helpers import login_required, apology
 
@@ -36,8 +37,8 @@ def apology(message, code=400):
 
     return render_template("apology.html", top=code, bottom=escape(message)), code
 
-# end of helpers.py
 
+# end of helpers.py
 
 
 app = Flask(__name__)
@@ -66,3 +67,10 @@ def login():
     return render_template('login.html')
 
 
+@app.route('/manifest.json')
+def serve_manifest():
+    return send_file('manifest.json', mimetype='application/manifest+json')
+
+@app.route('/sw.js')
+def serve_sw():
+    return send_file('sw.js', mimetype='application/javascript')

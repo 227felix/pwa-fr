@@ -10,6 +10,10 @@ self.addEventListener('install', function(event) {
       })
     );
   });
+
+self.addEventListener('activate', function(event) {
+  console.log('[Service Worker] Activating Service Worker ...', event);
+});
   
   self.addEventListener('fetch', function(event) {
     event.respondWith(
