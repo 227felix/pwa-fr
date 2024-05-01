@@ -1,0 +1,13 @@
+{
+    "name": "Test",
+    "short_name": "App",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Your App Description",
+    "icons": [{
+      "src": "kreis.jpg",
+      "sizes": "48x48",
+      "type": "image/jpg"
+    }]
+  }
