@@ -1,14 +1,13 @@
 .grey-box {
-    position: absolute;
-    top: 93vh;
+    position: fixed;
+    top: auto;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #797979;
+    background-color: #2a2a2a;
     color: white;
 
-    border-radius: 5px;
     padding: 10px;
 
-    height: 7vh;
+    height: 6vh;
 }
