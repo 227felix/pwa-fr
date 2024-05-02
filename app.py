@@ -74,3 +74,8 @@ def serve_manifest():
 @app.route('/sw.js')
 def serve_sw():
     return send_file('sw.js', mimetype='application/javascript')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
