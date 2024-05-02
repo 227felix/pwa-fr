@@ -1,13 +1,22 @@
-.grey-box {
+.navbar {
     position: fixed;
     top: auto;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #2a2a2a;
+    background-color: #273469;
     color: white;
 
     padding: 10px;
 
     height: 6vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navicon svg {
+    fill: #FAFAFF;
 }
