@@ -12,9 +12,14 @@ body {
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+
+
+    /* Native scrolling feel on iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-    display: none;
+*{
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
