@@ -13,20 +13,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-
+    <!-- favicon -->
     <link rel="icon" href="/static/imgs/kreis.jpg" type="image/png">
+
+
     <link rel="apple-touch-icon" href="/static/imgs/kreis.jpg" type="image/png">
 
+    <!-- pwa support -->
     <link rel="manifest" href="manifest.json">
+    <!-- disable zooming -->
+    <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no, maximum-scale=1.0">
 
-
+    <!-- css -->
     <link href="/static/css/styles.css" rel="stylesheet">
     <link href="/static/css/navbar.css" rel="stylesheet">
     <link href="/static/css/messages.css" rel="stylesheet">
     {% block css %}{% endblock %}
 
-    <title>{% block title %}{% endblock %}</title>
+    <!-- js -->
     <script src="/static/scripts/scripts.js" defer></script>
+
+
+    <!-- title -->
+    <title>{% block title %}{% endblock %}</title>
 
 
 </head>
