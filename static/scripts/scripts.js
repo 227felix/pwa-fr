@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // User prefers dark theme
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        // User prefers light theme
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+});
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('sw.js').then(function(registration) {
@@ -6,14 +16,4 @@ if ('serviceWorker' in navigator) {
       console.log('ServiceWorker registration failed: ', err);
     });
   });
-}
-
-window.onload = function() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // User prefers dark theme
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        // User prefers light theme
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
 }
