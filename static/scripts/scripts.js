@@ -10,10 +10,10 @@ if ('serviceWorker' in navigator) {
 
 window.onload = function() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // dark mode is enabled
-        console.log('Dark mode is enabled');
+        // User prefers dark theme
+        document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-        // dark mode is not enabled
-        console.log('Dark mode is not enabled');
+        // User prefers light theme
+        document.documentElement.setAttribute('data-theme', 'light');
     }
 }

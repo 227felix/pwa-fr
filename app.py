@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 
 
-#from helpers import login_required, apology
+# from helpers import login_required, apology
 
 ## helpers.py
 def login_required(f):
@@ -71,6 +71,7 @@ def login():
 def serve_manifest():
     return send_file('manifest.json', mimetype='application/manifest+json')
 
+
 @app.route('/sw.js')
 def serve_sw():
     return send_file('sw.js', mimetype='application/javascript')
@@ -78,4 +79,3 @@ def serve_sw():
 
 if __name__ == '__main__':
     app.run(debug=True)
-

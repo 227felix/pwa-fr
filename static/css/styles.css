@@ -1,6 +1,24 @@
+:root {
+    /* Light theme properties */
+    --background-color: #FAFAFF;
+    --text-color: #30343F;
+
+    --top-box-color: #000000;
+}
+
+[data-theme="dark"] {
+    /* Dark theme properties */
+    --background-color: #30343F;
+    --text-color: #FAFAFF;
+    --top-box-color: #ffffff;
+}
+
 body {
-    background-color: #FAFAFF;
-    color: #30343F;
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+
     margin: 0;
     padding: 4vh;
 
@@ -21,6 +39,18 @@ body {
     /* Native scrolling feel on iOS */
     -webkit-overflow-scrolling: touch;
 }
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, var(--top-box-color), transparent);
+    z-index: 2;
+}
+
 
 *{
     ::-webkit-scrollbar {
