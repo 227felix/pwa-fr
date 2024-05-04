@@ -33,6 +33,14 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        /* Dark theme properties */
+        background-color: #30343F;
+        color: #FAFAFF;
+    }
+}
+
 
 body.dark-theme {
     /* Dark theme properties */
@@ -41,8 +49,7 @@ body.dark-theme {
 }
 
 
-
-*{
+* {
     ::-webkit-scrollbar {
         display: none;
     }
