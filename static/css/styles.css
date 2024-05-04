@@ -6,56 +6,44 @@
     --top-box-color: #000000;
 }
 
-html {
-    min-height: calc(100% + env(safe-area-inset-top));
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+body {
+    position: relative;
+    background-color: #FAFAFF;
+    color: #30343F;
+
+
+    margin: 0;
+    padding: 4vh;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+
+
+    text-align: justify;
+
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+
+    /* Native scrolling feel on iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
+@media (prefers-color-scheme: dark) {
     body {
-        position: relative;
-        background-color: #FAFAFF;
-        color: #30343F;
-
-
-        margin: 0;
-        padding: 4vh;
-
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1.2rem;
-
-
-        text-align: justify;
-
-
-        /* Hide scrollbar for IE, Edge and Firefox */
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-
-
-        /* Native scrolling feel on iOS */
-        -webkit-overflow-scrolling: touch;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        body {
-            /* Dark theme properties */
-            background-color: #30343F;
-            color: #FAFAFF;
-        }
-    }
-
-
-    body.dark-theme {
         /* Dark theme properties */
         background-color: #30343F;
         color: #FAFAFF;
     }
+}
 
 
-    * {
-        ::-webkit-scrollbar {
-            display: none;
-        }
+* {
+    ::-webkit-scrollbar {
+        display: none;
     }
+}
