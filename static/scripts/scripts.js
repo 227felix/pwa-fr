@@ -1,11 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // User prefers dark theme
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        // User prefers light theme
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
+    // Force dark theme
+    document.body.classList.add('dark-theme');
+    console.log('DOM fully loaded and parsed');
 });
 
 if ('serviceWorker' in navigator) {

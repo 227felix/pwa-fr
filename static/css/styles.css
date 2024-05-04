@@ -6,17 +6,10 @@
     --top-box-color: #000000;
 }
 
-[data-theme="dark"] {
-    /* Dark theme properties */
-    --background-color: #30343F;
-    --text-color: #FAFAFF;
-    --top-box-color: #ffffff;
-}
-
 body {
     position: relative;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #FAFAFF;
+    color: #30343F;
 
 
     margin: 0;
@@ -40,6 +33,12 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+
+body.dark-theme {
+    /* Dark theme properties */
+    background-color: #30343F;
+    color: #FAFAFF;
+}
 
 
 
