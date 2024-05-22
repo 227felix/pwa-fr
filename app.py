@@ -67,6 +67,13 @@ def login():
     return render_template('login.html')
 
 
+@app.route('/gpx_map', methods=['GET', 'POST'])
+def gpx_map():
+    if request.method == 'POST':
+        return redirect('/gpx_map')
+    return render_template('gpx_map.html')
+
+
 @app.route('/manifest.json')
 def serve_manifest():
     return send_file('manifest.json', mimetype='application/manifest+json')
